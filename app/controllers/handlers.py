@@ -17,6 +17,12 @@ from sqlalchemy.orm import Session
 router = APIRouter()
 
 
+@router.get(path="/")
+async def root():
+    return ("Добро пожаловать в сервис расписания приема лекарств. "
+            "Сваггер доступен на http://{host}:{port}/docs")
+
+
 @router.post(path="/schedule", summary="Добавить расписание",
              response_model=IdScheduleResponse)
 async def create_schedule(schedule: Schedule, session: Session = Depends(get_database)):
