@@ -1,7 +1,7 @@
 from controllers.handlers import router
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(title='Расписание приема лекарств')
 app.include_router(router)
 
 

@@ -33,7 +33,7 @@ def get_id_schedules(user_id: int, session: Session) -> List[int]:
     return schedule_id_list
 
 
-def get_daily_schedule(user_id: int, schedule_id: int, session: Session):
+def get_daily_schedule(user_id: int, schedule_id: int, session: Session) -> ReceptionScheduleResponse:
     """Функция предоставляет инфо о выбранном расписании с графиком приема лекарств"""
     available_schedules = get_id_schedules(user_id=user_id, session=session)
     if not available_schedules:
