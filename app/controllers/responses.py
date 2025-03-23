@@ -1,5 +1,6 @@
-from fastapi import Response
 from json import JSONEncoder
+
+from fastapi import Response
 
 
 def ErrorResponse(message: str, status_code: int):

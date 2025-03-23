@@ -1,14 +1,15 @@
 from datetime import datetime, timedelta
-from fastapi import HTTPException
 from http import HTTPStatus
-from sqlalchemy.orm import Session
 from typing import List, Tuple
+
 from config import settings
 from controllers.models.request import Schedule
 from controllers.models.response import ReceptionScheduleResponse
 from controllers.responses import ErrorResponse
 from database.models import ScheduleDb
 from database.useful import calculate_schedule
+from fastapi import HTTPException
+from sqlalchemy.orm import Session
 
 
 def create_schedule_controller(schedule: Schedule, session: Session) -> int:

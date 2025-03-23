@@ -1,6 +1,7 @@
 from datetime import date, datetime
-from pydantic import BaseModel
 from typing import List
+
+from pydantic import BaseModel
 
 
 class ReceptionScheduleResponse(BaseModel):
